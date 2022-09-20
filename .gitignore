@@ -1,0 +1,7 @@
+## More .gitgnore files in the 'app' and 'infrastructure' dirs
+
+# Bicep Compiled
+azuredeploy.json
+
+# Visual Studio 
+.vs

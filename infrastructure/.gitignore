@@ -1,0 +1,5 @@
+# Local infra builds
+main.json
+
+# Visual Studio Code
+.vs\**
