@@ -24,7 +24,6 @@ jobs:
         run: |
              git config user.name  ${{ github.actor }}
              git config user.email  ${{ github.actor }}@github.com
-             git config advice.addIgnoredFile false
              git add ./azuredeploy.json
              git commit --allow-empty -m "Updating AzureDeploy.json for one click deploy"
              git push
