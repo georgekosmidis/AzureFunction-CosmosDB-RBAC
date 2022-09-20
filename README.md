@@ -1,5 +1,5 @@
 
-![Azure Deploy Build](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/BuildAzureDeploy.yml/badge.svg) ![Azure Function Build](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/BuildAndDeployWebApp.yml/badge.svg)
+![Azure Deploy Build](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/CompileAzureDeploy.yml/badge.svg) ![Azure Function Build](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/BuildAndDeployWebApp.yml/badge.svg)
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json)
 
