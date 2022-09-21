@@ -9,13 +9,13 @@ param location string = resourceGroup().location
   'BoundedStaleness'
   'Strong'
 ])
-param defaultConsistencyLevel string// = 'Session'
+param defaultConsistencyLevel string
 
 @description('The name for the database')
-param databaseName string// = 'EarthDatabase'
+param databaseName string
 
 @description('The name for the container')
-param containerName string// = 'LifeOnEarthContainer'
+param containerName string
 
 var accountName = '${resourceGroup().name}-cosmos'
 
