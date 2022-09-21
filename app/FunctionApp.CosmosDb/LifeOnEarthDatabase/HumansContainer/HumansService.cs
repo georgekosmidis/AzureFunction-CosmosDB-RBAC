@@ -7,7 +7,7 @@ public class HumansService : IHumansService
 {
     private readonly Container container;
 
-    public HumansService(ICosmosDbService cosmosDbService) => container = cosmosDbService.Container("EarthDatabase", "HumansContainer");
+    public HumansService(ICosmosDbService cosmosDbService) => container = cosmosDbService.Container("LifeOnEarthDatabase", "HumansContainer");
 
     public async Task<IEnumerable<HumanDto>> Get(string location, CancellationToken cancellationToken)
     {

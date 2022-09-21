@@ -63,10 +63,10 @@ param keyVaultSku string = 'standard'
 param defaultConsistencyLevel string = 'Session'
 
 @description('The name for the CosmosDb database')
-param databaseName string = 'EarthDatabase'
+param databaseName string = 'LifeOnEarthDatabase'
 
 @description('The name for the CosmosDb container (that will go under the previous database)')
-param containerName string = 'LifeOnEarthContainer'
+param containerName string = 'HumansContainer'
 
 module analyticsWorkspace 'modules/main.analyticsWorkspace.bicep' = {
   name: 'analytics-workspace'
