@@ -3,6 +3,8 @@
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json)
 
+[![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json)
+
 # An Azure Function connecting to a CosmosDB using RBAC
 
 This sample contains an out-of-proc function app written in C# (.NET 6) and the supporting IaC written in bicep. 
