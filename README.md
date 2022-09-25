@@ -1,7 +1,7 @@
 
 [![Compile AzureDeploy.json](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/CompileAzureDeploy.yml/badge.svg)](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/CompileAzureDeploy.yml) [![Deploy .NET App](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/BuildAndDeployWebApp.yml/badge.svg)](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/actions/workflows/BuildAndDeployWebApp.yml)
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](https://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json) [![Visualize](https://raw.githubusercontent.com/Azure/azure-quickstart-templates/master/1-CONTRIBUTION-GUIDE/images/visualizebutton.svg?sanitize=true)](http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fgeorgekosmidis%2FAzureFunction-CosmosDB-RBAC%2Fmain%2Fazuredeploy.json)
 
 # An Azure Function connecting to a CosmosDB using RBAC
 
