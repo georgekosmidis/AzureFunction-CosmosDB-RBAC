@@ -11,16 +11,16 @@ This sample contains an out-of-proc function app written in C# (.NET 6) that con
 
 ## Infrastructure
 
-The infrastructure is using the [BuildAzureDeploy.yml](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/blob/main/.github/workflows/BuildAzureDeploy.yml) action to compile the [azuredeploy.json](/georgekosmidis/AzureFunction-CosmosDB-RBAC/blob/main/azuredeploy.json) that is being used in the blue '**Deploy to Azure**' button. All resources are deployed in their most cost effective pricing model, se feel free to play around.
+The infrastructure is using the [BuildAzureDeploy.yml](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/blob/main/.github/workflows/BuildAzureDeploy.yml) action to compile the [azuredeploy.json](/georgekosmidis/AzureFunction-CosmosDB-RBAC/blob/main/azuredeploy.json) that is being used in the blue '**Deploy to Azure**' button. All resources are deployed in their most cost effective pricing model, so feel free to play around.
 
-The namings of all  resources are using the Resource Group `name` as prefix (e.g. `ResourceGroupName-webapp`) and are deployed in the Region the Resource Group is ([not all locations support Azure CosmosDB](https://learn.microsoft.com/en-us/cli/azure/cosmosdb/locations?view=azure-cli-latest#az-cosmosdb-locations-list).
+The namings of all  resources are using the Resource Group `name` as prefix (e.g. `ResourceGroupName-webapp`) and are deployed in the Region the Resource Group is ([not all locations support Azure CosmosDB](https://learn.microsoft.com/en-us/cli/azure/cosmosdb/locations?view=azure-cli-latest#az-cosmosdb-locations-list)).
 
-> Keep your Resource Group `name` small and unique. If you can't, just give [dive in](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/tree/main/infrastructure) and give custom names to each resource.
+> Keep your Resource Group `name` small and unique. If you can't, just [dive in](https://github.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/tree/main/infrastructure) and give custom names to each resource.
 
 After a succesful deployment, here is what you will end up with:
 
 1. An **Azure Function**,
-   Windows, .NET 6, out-of-proc)
+   Windows, .NET 6, out-of-proc
 2. An **Azure Storage**,
    for the Azure Function
 3. An **Azure KeyVault**,
@@ -50,7 +50,7 @@ The Function App contains 3 endpoints:
 2. `api/Health`,
    that connects to CosmosDB and returns true if there is at least one readable region
 3. `api/Humans/{location}`,
-   that supposingly returns a list of name for the selected location (it doesn't unless you add some data!)
+   that will return a list of names for the selected location (you must add some data!)
 
 > Here is a sample object that you can copy paste as data in your container:
 > `{ location: 'Germany', field: 'some-random-value' }`
