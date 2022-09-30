@@ -5,7 +5,7 @@
     "_generator": {
       "name": "bicep",
       "version": "0.10.61.36676",
-      "templateHash": "12425384205197788760"
+      "templateHash": "1464613778674330005"
     }
   },
   "parameters": {
@@ -1421,7 +1421,7 @@
             "_generator": {
               "name": "bicep",
               "version": "0.10.61.36676",
-              "templateHash": "5721982842696837622"
+              "templateHash": "3170690898101021370"
             }
           },
           "parameters": {
@@ -1440,7 +1440,7 @@
             "roleIds": {
               "type": "array",
               "metadata": {
-                "description": "The build in role GUID. See https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles"
+                "description": "The build in role GUID. See https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-setup-rbac#built-in-role-definitions"
               }
             }
           },
