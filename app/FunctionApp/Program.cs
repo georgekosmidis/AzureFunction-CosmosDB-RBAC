@@ -7,7 +7,7 @@ using Microsoft.Extensions.Logging;
 
 const string COSMOSDB_ENDPOINT = "COSMOSDB_ENDPOINT";
 const string COSMOSDB_KEY = "COSMOSDB_KEY";
-HostBuilder builder = new HostBuilder();
+var builder = new HostBuilder();
 
 // Connect to an Azure App Configuration
 //app.ConfigureAppConfiguration(builder =>

@@ -4,7 +4,7 @@ param cosmosDbName string
 @description('The Service Principal ID')
 param principalId string
 
-@description('The build in role GUID. See https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles')
+@description('The build in role GUID. See https://learn.microsoft.com/en-us/azure/cosmos-db/how-to-setup-rbac#built-in-role-definitions')
 param roleIds array
 
 resource cosmosDb 'Microsoft.DocumentDB/databaseAccounts@2022-05-15' existing =  {
