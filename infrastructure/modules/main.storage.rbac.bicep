@@ -7,7 +7,7 @@ param principalId string
 @description('The build in role GUID. See https://docs.microsoft.com/en-us/azure/role-based-access-control/built-in-roles')
 param roleIds array
 
-resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' existing = {
+resource storageAccount 'Microsoft.Storage/storageAccounts@2025-06-01' existing = {
   name: storageAccountName
 }
 

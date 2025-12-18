@@ -11,8 +11,9 @@ resource cosmosDb 'Microsoft.DocumentDB/databaseAccounts@2022-05-15' existing = 
   name: cosmosDbName
 }
 
-resource sqlRoleAssignment 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2022-05-15' = [for roleId in roleIds: {
-  name: '${cosmosDb.name}/${guid(roleId, principalId, cosmosDb.id)}'
+resource sqlRoleAssignment 'Microsoft.DocumentDB/databaseAccounts/sqlRoleAssignments@2025-11-01-preview' = [for roleId in roleIds: {
+  parent: cosmosDb
+  name: guid(roleId, principalId, cosmosDb.id)
   properties: {
     roleDefinitionId: '${resourceGroup().id}/providers/Microsoft.DocumentDB/databaseAccounts/${cosmosDb.name}/sqlRoleDefinitions/${roleId}'
     principalId: principalId

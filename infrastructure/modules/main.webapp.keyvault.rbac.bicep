@@ -7,7 +7,7 @@ param roleIds array
 @description('The Service Principal ID')
 param principalId string
 
-resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' existing = {
+resource keyVault 'Microsoft.KeyVault/vaults@2025-05-01' existing = {
   name: keyVaultName
 }
 

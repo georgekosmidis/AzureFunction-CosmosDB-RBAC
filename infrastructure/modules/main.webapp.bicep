@@ -34,7 +34,7 @@ var webAppName = '${resourceGroup().name}-webapp'
 var serverFarmName = '${webAppName}-asp'
 var webAppContentShare = guid(webAppName)
 
-resource serverFarm 'Microsoft.Web/serverfarms@2022-03-01' = {
+resource serverFarm 'Microsoft.Web/serverfarms@2025-03-01' = {
   name: serverFarmName
   location: location
   sku: {
@@ -51,7 +51,7 @@ resource serverFarm 'Microsoft.Web/serverfarms@2022-03-01' = {
 }
 
 
-resource webApp 'Microsoft.Web/sites@2022-03-01' = {
+resource webApp 'Microsoft.Web/sites@2025-03-01' = {
   name: webAppName
   location: location
   kind: 'functionapp'
@@ -93,7 +93,7 @@ module keyVaultRoleAssignment 'main.webapp.keyvault.rbac.bicep' = {
   }
 }
 
-resource webAppSettings 'Microsoft.Web/sites/config@2022-03-01' = {
+resource webAppSettings 'Microsoft.Web/sites/config@2025-03-01' = {
   parent: webApp
   name: 'appsettings'
   dependsOn:[

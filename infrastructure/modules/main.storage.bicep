@@ -12,7 +12,7 @@ param storageAccountSKU string //= 'Standard_LRS'
 
 var storageAccountName = replace(replace(replace('${resourceGroup().name}-webapp-stg', 'api', ''), 'wv-rg-', ''),'-', '')
 
-resource storageAccount 'Microsoft.Storage/storageAccounts@2022-05-01' = {
+resource storageAccount 'Microsoft.Storage/storageAccounts@2025-06-01' = {
   name: storageAccountName
   location: location
   sku: {
