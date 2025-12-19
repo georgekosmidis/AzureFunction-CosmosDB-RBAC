@@ -1,69 +1,60 @@
 name: Deploy .NET App
 
-env:
-  AZURE_WEBAPP_PACKAGE_PATH: '.app/FunctionApp'
-
 on:
   workflow_dispatch:
     inputs:
       AZURE_WEBAPP_NAME:
-        description: 'Use the Resource Group name to end up with something like [ResourceGroupName-webapp]'     
+        description: 'Use the Resource Group name to end up with something like [ResourceGroupName-webapp]'
         required: true
         default: ''
-        
+
 permissions:
   contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: dotnet-setup
-        uses: actions/setup-dotnet@v2
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 7.0.x
 
-      - name: dotnet-build
-        run: |
-            pushd ./app/FunctionApp/
-            dotnet build --configuration Release
-            popd
-            
-      - name: dotnet-publish
-        run: |
-            pushd ./app/FunctionApp/
-            dotnet publish -c Release -o _output
-            popd
-      - name: artifacts-upload
-        uses: actions/upload-artifact@v3
+      - name: Build
+        working-directory: ./app/FunctionApp
+        run: dotnet build --configuration Release
+
+      - name: Publish
+        working-directory: ./app/FunctionApp
+        run: dotnet publish -c Release -o _output
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
         with:
           name: cosmos-function-app
-          path: ./app/FunctionApp/_output/
+          path: ./app/FunctionApp/_output
 
   deploy:
     permissions:
       contents: none
-      
     runs-on: ubuntu-latest
     needs: build
-    
+
     environment:
-      name: 'Development'
+      name: Development
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
-      - name: artifacts-download
-        uses: actions/download-artifact@v3
+      - name: Download artifact
+        uses: actions/download-artifact@v4
         with:
           name: cosmos-function-app
+          path: ./package
 
-      - name: deploy
-        id: deploy-to-webapp
+      - name: Deploy
         uses: azure/webapps-deploy@v2
         with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          package: .
+          package: ./package

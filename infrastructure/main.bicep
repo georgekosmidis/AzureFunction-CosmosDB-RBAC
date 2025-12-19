@@ -106,9 +106,6 @@ module keyvault 'modules/main.keyvault.bicep' = {
 
 module webAppStorage 'modules/main.storage.bicep' = {
   name: 'webapp-storage'
-  dependsOn:[
-    keyvault
-  ]
   params:{
     storageAccountSKU: storageAccountSKU
     serviceKeyVaultName: keyvault.outputs.keyVaultName
@@ -119,11 +116,6 @@ module webAppStorage 'modules/main.storage.bicep' = {
 
 module webApp 'modules/main.webapp.bicep' = {
   name: 'webapp'
-  dependsOn:[
-    cosmosDb
-    webAppStorage
-    keyvault
-  ]
   params: {
     functionServicePlan: functionServicePlan
     location: location
@@ -138,10 +130,6 @@ module webApp 'modules/main.webapp.bicep' = {
 }
 
 module cosmosDbRBAC 'modules/main.cosmosdb.rbac.bicep' = {
-  dependsOn:[
-    cosmosDb
-    webApp
-  ]
   name: 'cosmos-db-rbac'
   params:{
     cosmosDbName: cosmosDb.outputs.cosmosDbName
@@ -152,10 +140,6 @@ module cosmosDbRBAC 'modules/main.cosmosdb.rbac.bicep' = {
 }
 
 module webAppStorageRBAC 'modules/main.storage.rbac.bicep' = {
-  dependsOn:[
-    webApp
-    webAppStorage
-  ]
   name: 'webapp-storage-rbac'
   params:{
     storageAccountName: webAppStorage.outputs.storageAccountName
