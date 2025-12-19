@@ -13,7 +13,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2021-11-01-preview' existing = {
   name: serviceKeyVaultName
 }
 
-resource keyVaultSecret 'Microsoft.KeyVault/vaults/secrets@2019-09-01' = {
+resource keyVaultSecret 'Microsoft.KeyVault/vaults/secrets@2025-05-01' = {
   parent: keyVault
   name: secretName
   properties: {

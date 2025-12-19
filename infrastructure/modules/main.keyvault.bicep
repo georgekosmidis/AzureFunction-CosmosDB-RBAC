@@ -14,7 +14,7 @@ param keyVaultSku string// = 'standard'
 var keyVaultName = replace(replace('${resourceGroup().name}-kvault', '-api', ''), 'wv-rg-', '')
 var keyVaultDiagName = '${keyVaultName}-diag'
 
-resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
+resource keyVault 'Microsoft.KeyVault/vaults@2025-05-01' = {
   name: keyVaultName
   location: location
   properties: {
@@ -36,7 +36,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2022-07-01' = {
 }
 
 
-resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2021-12-01-preview' existing = {
+resource logAnalyticsWorkspace 'Microsoft.OperationalInsights/workspaces@2025-07-01' existing = {
   name: logAnalyticsWorkspaceName
 }
 

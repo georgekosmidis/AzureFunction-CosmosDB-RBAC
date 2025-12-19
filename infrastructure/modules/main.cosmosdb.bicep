@@ -19,6 +19,8 @@ param containerName string
 
 var accountName = '${resourceGroup().name}-cosmos'
 
+// Define consistency policies
+// See: https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels
 var consistencyPolicy = {
   Eventual: {
     defaultConsistencyLevel: 'Eventual'
@@ -39,7 +41,7 @@ var consistencyPolicy = {
   }
 }
 
-resource account 'Microsoft.DocumentDB/databaseAccounts@2022-05-15' = {
+resource account 'Microsoft.DocumentDB/databaseAccounts@2025-11-01-preview' = {
   name: toLower(accountName)
   kind: 'GlobalDocumentDB'
   location: location
@@ -55,7 +57,7 @@ resource account 'Microsoft.DocumentDB/databaseAccounts@2022-05-15' = {
   }
 }
 
-resource database 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2022-05-15' = {
+resource database 'Microsoft.DocumentDB/databaseAccounts/sqlDatabases@2025-11-01-preview' = {
   parent: account
   name: databaseName
   properties: {
