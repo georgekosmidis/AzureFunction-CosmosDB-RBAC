@@ -1,5 +1,4 @@
 ﻿using FunctionApp.CosmosDb;
-using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -50,4 +49,4 @@ builder.ConfigureServices(services =>
 
 var app = builder.Build();
 
-app.Run();
+app.Run();app.Run();

@@ -1,6 +1,6 @@
 using FunctionApp.CosmosDb.LifeOnEarthDatabase.HumansContainer;
-using Microsoft.AspNetCore.Http;
 using Microsoft.Azure.Functions.Worker;
+using Microsoft.Azure.Functions.Worker.Http;
 using Microsoft.Extensions.Logging;
 
 namespace FunctionApp.HttpTriggers;
@@ -18,7 +18,7 @@ public class HumansHttpTriggers
 
     [Function($"{nameof(Humans)}/{{location:alpha}}")]
     public async Task<IEnumerable<HumanDto>> Humans(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequest req,
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req,
         //CancellationToken cancellationToken, //not supported for out-of-proc
         FunctionContext executionContext,
         string location
