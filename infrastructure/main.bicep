@@ -129,6 +129,17 @@ module webApp 'modules/main.webapp.bicep' = {
   }
 }
 
+// module cosmosDbRoleAssignment 'modules/main.cosmosdb.rbac.bicep' = {
+//   name: 'module-common-cosmosdb-RBAC'
+//   params:{
+//     cosmosDbName:  cosmosDb.outputs.cosmosDbName
+//     principalId: webApp.outputs.principalId
+//     roleIds: [
+//       '230815da-be43-4aae-9cb4-875f7bd000aa'
+//     ]
+//   }
+// }
+
 module cosmosDbRBAC 'modules/main.cosmosdb.rbac.bicep' = {
   name: 'cosmos-db-rbac'
   params:{

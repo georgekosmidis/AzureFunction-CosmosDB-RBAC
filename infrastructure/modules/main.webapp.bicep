@@ -93,6 +93,7 @@ module keyVaultRoleAssignment 'main.webapp.keyvault.rbac.bicep' = {
   }
 }
 
+
 resource webAppSettings 'Microsoft.Web/sites/config@2025-03-01' = {
   parent: webApp
   name: 'appsettings'
