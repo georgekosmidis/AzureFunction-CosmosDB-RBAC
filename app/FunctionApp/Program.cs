@@ -8,13 +8,6 @@ const string COSMOSDB_ENDPOINT = "COSMOSDB_ENDPOINT";
 const string COSMOSDB_KEY = "COSMOSDB_KEY";
 var builder = new HostBuilder();
 
-// Connect to an Azure App Configuration
-//app.ConfigureAppConfiguration(builder =>
-//{
-//    string cs = Environment.GetEnvironmentVariable("ConnectionString");
-//    builder.AddAzureAppConfiguration(cs);
-//})
-
 builder.ConfigureFunctionsWorkerDefaults();
 
 builder.ConfigureServices(services =>
@@ -49,4 +42,4 @@ builder.ConfigureServices(services =>
 
 var app = builder.Build();
 
-app.Run();app.Run();
+app.Run();
