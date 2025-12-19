@@ -16,9 +16,9 @@ public class HumansHttpTriggers
         _humansService = humansService;
     }
 
-    [Function($"{nameof(Humans)}/{{location:alpha}}")]
+    [Function(nameof(Humans))]
     public async Task<IEnumerable<HumanDto>> Humans(
-        [HttpTrigger(AuthorizationLevel.Anonymous, "get")] HttpRequestData req,
+        [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "Humans/{location:alpha}")] HttpRequestData req,
         //CancellationToken cancellationToken, //not supported for out-of-proc
         FunctionContext executionContext,
         string location
