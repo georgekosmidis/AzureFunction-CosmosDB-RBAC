@@ -2,11 +2,6 @@ name: Deploy .NET App
 
 on:
   workflow_dispatch:
-    inputs:
-      AZURE_WEBAPP_NAME:
-        description: 'Use the Resource Group name to end up with something like [ResourceGroupName-webapp]'
-        required: true
-        default: ''
 
 permissions:
   contents: read
