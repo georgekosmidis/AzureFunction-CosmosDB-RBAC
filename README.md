@@ -7,7 +7,7 @@
 
 ![An Azure Function connecting to a CosmosDB using RBAC](https://raw.githubusercontent.com/georgekosmidis/AzureFunction-CosmosDB-RBAC/main/docs/Solution-Architecture.drawio.png)
 
-This sample contains an out-of-proc function app written in C# (.NET 6) that connects to CosmosDB using RBAC (`DefaultAzureCredential()`) and the supporting infrastructure (Azure Function, Azure Storage, CosmosDB, Azure KeyVault, App Insights and RBAC setup) written in bicep. 
+This sample contains an out-of-proc function app written in C# (.NET 8) that connects to CosmosDB using RBAC (`DefaultAzureCredential()`) and the supporting infrastructure (Azure Function, Azure Storage, CosmosDB, Azure KeyVault, App Insights and RBAC setup) written in bicep. 
 
 ## Infrastructure
 
