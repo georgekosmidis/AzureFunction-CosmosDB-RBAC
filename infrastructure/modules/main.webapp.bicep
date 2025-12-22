@@ -73,7 +73,7 @@ resource webApp 'Microsoft.Web/sites@2025-03-01' = {
     siteConfig: {
       ftpsState: 'Disabled'
       numberOfWorkers: 1
-      netFrameworkVersion: 'v6.0'
+      netFrameworkVersion: 'v8.0'
       webSocketsEnabled: true
     }
     httpsOnly: true 
