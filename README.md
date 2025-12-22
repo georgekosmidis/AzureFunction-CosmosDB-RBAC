@@ -20,7 +20,7 @@ The namings of all  resources are using the Resource Group `name` as prefix (e.g
 After a succesful deployment, here is what you will end up with:
 
 1. An **Azure Function**,
-   Windows, .NET 6, out-of-proc
+   Windows, .NET 8, out-of-proc
 2. An **Azure Storage**,
    for the Azure Function
 3. An **Azure KeyVault**,
@@ -35,7 +35,7 @@ After a succesful deployment, here is what you will end up with:
 
 ## Application
 
-The Azure Function was build using Visual Studio 2022 and .NET 6 Isolated (out-of-proc). It connects to CosmosDB endpoint `COSMOSDB_ENDPOINT` which can be found in the Application Setting. During development (or debugging) the Application Setting `COSMOSDB_KEY` can be used to switch the authentication to a traditional connection string. 
+The Azure Function was build using Visual Studio 2022 and .NET 8 Isolated (out-of-proc). It connects to CosmosDB endpoint `COSMOSDB_ENDPOINT` which can be found in the Application Setting. During development (or debugging) the Application Setting `COSMOSDB_KEY` can be used to switch the authentication to a traditional connection string. 
 
 > The infrastructure deployment creates a `COSMOSDB_ENDPOINT` Application Setting for the app to read; no need for you to do anything.
 
